@@ -1,1 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Refresh Opportunity Scoring - Capstone</title>
 
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+header{
+    background:#0f172a;
+    color:white;
+    padding:50px 20px;
+    text-align:center;
+}
+main{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:40px;
+}
+section{
+    margin-bottom:40px;
+}
+h2{
+    border-left:6px solid #2563eb;
+    padding-left:12px;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+table,th,td{
+    border:1px solid #ccc;
+}
+th{
+    background:#2563eb;
+    color:white;
+}
+th,td{
+    padding:12px;
+    text-align:center;
+}
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Content Refresh Opportunity Scoring using Machine Learning</h1>
+
+<h3>FlyRank ML Internship Capstone</h3>
+
+<p><b>Author:</b> Param Koli</p>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Abstract</h2>
+
+<p>
+
+This capstone project predicts whether existing web content should be refreshed based on historical performance data.
+The objective is to help prioritize content updates using machine learning instead of manual review.
+A Random Forest classifier was trained and evaluated against a baseline model to identify pages likely to experience downward performance trends.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Introduction</h2>
+
+<p>
+
+Content refresh is an important SEO strategy.
+Instead of updating every page, organizations benefit from identifying pages that are most likely to lose traffic.
+This project applies supervised machine learning to classify content into refresh candidates based on historical metrics.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Dataset</h2>
+
+<p>
+
+Dataset Used:
+
+<ul>
+
+<li>content_refresh_anonymized.csv</li>
+
+<li>30,000 rows</li>
+
+<li>44 columns</li>
+
+<li>Trend labels were excluded from model features to avoid data leakage.</li>
+
+</ul>
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Methodology</h2>
+
+<ol>
+
+<li>Load dataset.</li>
+
+<li>Clean missing values.</li>
+
+<li>Separate target variable.</li>
+
+<li>Train/Test split.</li>
+
+<li>Create baseline model.</li>
+
+<li>Train Random Forest classifier.</li>
+
+<li>Evaluate using Accuracy, Precision, Recall and F1 Score.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>Results</h2>
+
+<table>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Baseline Accuracy</td>
+
+<td>0.700</td>
+
+</tr>
+
+<tr>
+
+<td>Random Forest Accuracy</td>
+
+<td>0.689</td>
+
+</tr>
+
+<tr>
+
+<td>Precision</td>
+
+<td>0.700</td>
+
+</tr>
+
+<tr>
+
+<td>Recall</td>
+
+<td>0.752</td>
+
+</tr>
+
+<tr>
+
+<td>F1 Score</td>
+
+<td>0.725</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Discussion</h2>
+
+<p>
+
+Although the Random Forest model achieved slightly lower accuracy than the baseline, it significantly improved recall.
+This means the model successfully identifies more pages that require refreshing, making it more useful in practical SEO workflows.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Recommendations</h2>
+
+<ul>
+
+<li>Use additional behavioral features.</li>
+
+<li>Perform feature engineering.</li>
+
+<li>Tune Random Forest hyperparameters.</li>
+
+<li>Evaluate Gradient Boosting and XGBoost.</li>
+
+<li>Retrain the model periodically using fresh data.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Limitations</h2>
+
+<ul>
+
+<li>Single anonymized dataset.</li>
+
+<li>No hyperparameter optimization.</li>
+
+<li>Limited feature engineering.</li>
+
+<li>No external SEO signals.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Conclusion</h2>
+
+<p>
+
+The project demonstrates that machine learning can assist in identifying web pages that should be refreshed.
+Random Forest produced strong recall and F1 score, making it valuable for prioritizing content updates.
+Future improvements include richer features and advanced ensemble models.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Reproducibility</h2>
+
+<p>
+
+Repository:
+
+<br><br>
+
+<a href="https://github.com/ParamKoli/flyrank-ml-internship">
+
+https://github.com/ParamKoli/flyrank-ml-internship
+
+</a>
+
+</p>
+
+</section>
+
+<footer>
+
+FlyRank Machine Learning Internship Capstone • 2026
+
+</footer>
+
+</main>
+
+</body>
+</html>
